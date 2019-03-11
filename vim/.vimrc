@@ -1,4 +1,4 @@
-set tabstop=4       
+set tabstop=4
 set shiftwidth=4    
 set softtabstop=4   
 set expandtab       
@@ -17,5 +17,3 @@ set wildmode=longest:full,full
 syntax enable
 colorscheme molokai
 
-execute pathogen#infect()
-call pathogen#helptags()
