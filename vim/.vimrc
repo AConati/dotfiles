@@ -13,7 +13,6 @@ let g:lightline = {
 
 " ale linter options
 let g:ale_python_flake8_options='--ignore=E501' " ignore >80 char lines warning python
-
 set tabstop=4
 set shiftwidth=4    
 set softtabstop=4   
@@ -43,8 +42,9 @@ nnoremap k gk
 
 let mapleader="\<Space>"
 
-nmap <leader>fr :%s///g<left><left>
-nmap <leader>frl :s///g<left><left>
+nmap <leader>r :%s///g<left><left>
+nmap <leader>lr :s///g<left><left>
+nmap <leader>s /\%V
 nnoremap <Leader><space> :nohlsearch<CR>
 
 map <C-n> :NERDTreeToggle<CR>
@@ -52,10 +52,12 @@ map <C-n> :NERDTreeToggle<CR>
 cmap w!! w !sudo tee % >/dev/null 
 
 
-" Java specific
 autocmd FileType java inoremap { {<return><backspace>}<esc>O
+autocmd FileType javascript inoremap { {<return><backspace>}<esc>O
+autocmd FileType c inoremap { {<return><backspace>}<esc>O
+autocmd FileType html inoremap < <><left>
 
 syntax enable
 colorscheme molokai
-" colorscheme badwolf
+"colorscheme badwolf
 
